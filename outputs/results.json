@@ -1,0 +1,63 @@
+{
+  "customers": 131209,
+  "pairs": 8474661,
+  "positive_rate": 0.09780025419305857,
+  "threshold": 0.41,
+  "best_params": {
+    "learning_rate": 0.03755115322842063,
+    "num_leaves": 57,
+    "min_child_samples": 59,
+    "feature_fraction": 0.728034992108518,
+    "bagging_fraction": 0.8925879806965068,
+    "lambda_l2": 0.006290644294586149,
+    "scale_pos_weight": 3.0569377536544464
+  },
+  "trees": 967,
+  "test_results": [
+    {
+      "model": "Baseline: last order",
+      "precision": 0.27890558226165835,
+      "recall": 0.4604273713400212,
+      "f1": 0.3473827683920017,
+      "mean_order_f1": 0.3121209237017012,
+      "roc_auc": 0.6660022202041963,
+      "pr_auc": 0.18095734816314005
+    },
+    {
+      "model": "LightGBM (tuned)",
+      "precision": 0.3643539194027175,
+      "recall": 0.5636000326237665,
+      "f1": 0.44258635983719163,
+      "mean_order_f1": 0.380891862715451,
+      "roc_auc": 0.8375200852367379,
+      "pr_auc": 0.4302878576304623
+    }
+  ],
+  "top10": [
+    {
+      "ranking": "Most recent first",
+      "recall@10": 0.5281578428144857,
+      "hit_rate@10": 0.8959209304865396
+    },
+    {
+      "ranking": "Most frequent first",
+      "recall@10": 0.519869390619343,
+      "hit_rate@10": 0.9036749849833452
+    },
+    {
+      "ranking": "Model",
+      "recall@10": 0.5892771524161281,
+      "hit_rate@10": 0.9335444766013214
+    }
+  ],
+  "top_features_permutation": {
+    "up_order_rate": 0.01598,
+    "up_days_since_last": 0.01284,
+    "up_times": 0.01274,
+    "p_reorder_rate": 0.01122,
+    "up_orders_since_last": 0.01085,
+    "up_days_vs_gap": 0.01075,
+    "u_reorder_ratio": 0.01008,
+    "t_days_since_prior": 0.00699
+  }
+}
